@@ -235,12 +235,60 @@ header img {
     padding-bottom: 2rem;
 }
 
-.luchatitle {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: bold;
-    color: #939393;
+
+/* Media queries for tablets */
+@media screen and (max-width: 768px) {
+    /* Adjust navbar */
+    .navbar {
+        flex-direction: column;
+    }
+    .navbar-toggler {
+        order: -1; /* Move toggler to top */
+    }
+    .collapse.navbar-collapse {
+        display: none; /* Hide navbar links by default */
+    }
+    .navbar-collapse.show {
+        display: flex; /* Show navbar links when toggler is clicked */
+        flex-direction: column;
+        padding-top: 1rem; /* Add padding to separate links */
+    }
+
+    /* Adjust footer */
+    .footer-info, .footermenu {
+        text-align: center;
+    }
 }
 
-.luchatext {
-    font-family: 'Montserrat', sans-serif;
+/* Media queries for small devices (e.g., smartphones) */
+@media screen and (max-width: 576px) {
+    /* Adjust header */
+    h1 {
+        font-size: 1.5rem;
+    }
+    h2 {
+        font-size: 1.2rem;
+    }
+
+    /* Adjust gallery */
+    .gallery img {
+        width: 100%; /* Make images fill the container */
+    }
+
+    /* Adjust form */
+    .form {
+        width: 90%; /* Increase width of form */
+    }
 }
+
+/* Media queries for large screens (e.g., desktops) */
+@media screen and (min-width: 1200px) {
+    /* Adjust footer */
+    footer {
+        flex-direction: row;
+    }
+    .footer-info, .footermenu {
+        flex: 1; /* Equal width for footer columns */
+    }
+}
+
